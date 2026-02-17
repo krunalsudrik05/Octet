@@ -1,0 +1,49 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.submit {
+  grid-column: span 5;
+  padding: 12px;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #15803d;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .submit {
+    grid-column: span 2;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .submit {
+    grid-column: span 1;
+  }
+}

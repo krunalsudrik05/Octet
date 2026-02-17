@@ -1,0 +1,37 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+}
+
+.td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.high {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.medium {
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.low {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* MOBILE TABLE SCROLL */
+
+.wrapper {
+  overflow-x: auto;
+}
