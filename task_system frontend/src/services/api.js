@@ -1,4 +1,4 @@
-const BASE_URL = "https://octet-mrsh.onrender.com";
+const BASE_URL = "https://octet-mrsh.onrender.com/tasks";
 
 export const validateTasks = async (tasks) => {
   const response = await fetch(`${BASE_URL}/validate/`, {
