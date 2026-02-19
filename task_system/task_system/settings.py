@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-ukdes32d43#j(rc2a@gr$!&z25+dwoccns731g^b3^7b32@$g3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://octet-mrsh.onrender.com/','localhost','https://octet-z7jr.vercel.app/','127.0.0.1']
+ALLOWED_HOSTS = ['octet-mrsh.onrender.com',
+    'octet-z7jr.vercel.app',
+    'localhost',
+    '127.0.0.1']
 
 
 # Application definition
@@ -43,16 +46,25 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
     'corsheaders.middleware.CorsMiddleware',
+
+    'django.contrib.sessions.middleware.SessionMiddleware',
+
     'django.middleware.common.CommonMiddleware',
+
+    'django.middleware.csrf.CsrfViewMiddleware',
+
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+
+    'django.contrib.messages.middleware.MessageMiddleware',
+
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 
