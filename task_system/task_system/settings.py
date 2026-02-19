@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ukdes32d43#j(rc2a@gr$!&z25+dwoccns731g^b3^7b32@$g3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://octet-3hqn.onrender.com/','localhost','https://octet-z7jr.vercel.app/','127.0.0.1']
+ALLOWED_HOSTS = ['https://octet-mrsh.onrender.com/','localhost','https://octet-z7jr.vercel.app/','127.0.0.1']
 
 
 # Application definition
