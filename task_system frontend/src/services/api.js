@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:8000/tasks";
+const BASE_URL = "https://octet-3hqn.onrender.com/";
 
 export const validateTasks = async (tasks) => {
   const response = await fetch(`${BASE_URL}/validate`, {
