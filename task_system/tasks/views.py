@@ -33,34 +33,35 @@ def prioritize_tasks(request):
         
     return Response(result)
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def validate_tasks(request):
+
+    if request.method == 'GET':
+        return Response({
+            "message": "Validate API is working",
+            "usage": "Send POST request with task list"
+        })
 
     tasks = request.data
 
-    valid_tasks = []
-    invalid_tasks = []
+    valid = []
+    invalid = []
 
     for task in tasks:
 
         errors = validate_task(task)
 
         if errors:
-
-            invalid_tasks.append({
-                "task_id": task.get("task_id", None),
+            invalid.append({
+                "task_id": task.get("task_id"),
                 "errors": errors
             })
-
         else:
-
-            valid_tasks.append(task)
+            valid.append(task)
 
     return Response({
-
-        "valid_tasks": valid_tasks,
-        "invalid_tasks": invalid_tasks
-
+        "valid_tasks": valid,
+        "invalid_tasks": invalid
     })
     
 #Health Check
